@@ -1,0 +1,17 @@
+{
+    "contents" : "#' Calculate a specified index\n#' @description Given a data frame of indices and a row number, calculate the specified index.\n#' @param normReflDF A data frame of normal reflectances with three columns: location, wavelength, and normrefl (normal reflectance).\n#' @param indexDF A data frame of indices that provides information on how to calculate each index.\n#' @param indexno Index number\n#' @return A data frame of locations and calculated index values\n#' @export\n\ncalculateIndex <- function(normReflDF, indexDF, indexno){ \n  p1 <- normReflDF$normrefl[which(normReflDF$wavelength == indexDF$w1[indexno])]\n  p2 <- normReflDF$normrefl[which(normReflDF$wavelength == indexDF$w2[indexno])]\n  p3 <- normReflDF$normrefl[which(normReflDF$wavelength == indexDF$w3[indexno])]\n  p4 <- normReflDF$normrefl[which(normReflDF$wavelength == indexDF$w4[indexno])]\n  index <- eval(parse(text = indexDF$expression_form[indexno]))\n  location <- unique(data$location)\n  indexdata <- data.frame(location, index)\n  return(indexdata)\n}",
+    "created" : 1435431941370.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2102235971",
+    "id" : "F3EAA649",
+    "lastKnownWriteTime" : 1435442060,
+    "path" : "~/GitHub/rHyperspec2/R/calculateIndex.R",
+    "project_path" : "R/calculateIndex.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

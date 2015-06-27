@@ -1,0 +1,9 @@
+Package: rHyperspec
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2015-06-27
+Author: Christine Laney
+Maintainer: Christine Laney <chasingdata@gamil.com>
+Description: More about what it does (maybe more than one line)
+License: GPL v3
